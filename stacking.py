@@ -15,17 +15,6 @@ import plotly.tools as tls
 import warnings
 warnings.filterwarnings('ignore')
 
-# Going to use these 5 base models for the stacking
-from sklearn.ensemble import *
-from sklearn.svm import SVC
-from sklearn.model_selection import KFold
-
-import os
-
-from catboost import CatBoostClassifier
-from lightgbm import LGBMClassifier
-
-import math
 
 import numpy as np
 import pandas as pd
@@ -47,18 +36,11 @@ from sklearn import preprocessing
 #Model Selection
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV ,StratifiedKFold
 from sklearn.linear_model  import LogisticRegression, RidgeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.naive_bayes import GaussianNB
-from sklearn import neighbors
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import (AdaBoostClassifier , GradientBoostingClassifier, AdaBoostClassifier ,
-                             RandomForestClassifier,RandomForestRegressor, BaggingClassifier)
+
 
 from sklearn.model_selection import KFold
 import numpy as np
-import pandas as pd
-from sklearn.base import clone
+
 
 class StackingModel:
     """
